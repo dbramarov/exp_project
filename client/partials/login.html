@@ -1,0 +1,24 @@
+<div class="login" ng-controller='registerController' >
+	<div class="loginForm">
+		<div ng-repeat="item in messages">
+			<h1>{{item}}</h1>
+		</div>
+		<div >
+		<h1><strong>Login</strong></h1>
+			<form>
+				<p>
+					<span id="input_addon" class="glyphicon glyphicon-envelope"></span> 
+					<input class="loginInput" type="text" ng-model="user.email" placeholder="Email">
+				</p>
+				<p class="loginPass">
+					<span id="input_addon" class="glyphicon glyphicon-user"></span>
+					<input class="loginInput" type="password" ng-model="user.password" placeholder="Password">
+				</p>
+				<p class="submit">
+				<button ng-click="login()"><span class="glyphicon glyphicon-arrow-right"></span></button>
+				</p>
+				<p>Not a user yet? <a href="#!/register"><strong>Register here</strong></a></p>
+			</form>
+		</div>
+	</div>
+</div>

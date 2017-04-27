@@ -1,0 +1,178 @@
+
+#content {	
+	font-family: 'Playfair Display SC'; 
+	text-align: center;
+	padding-top: 22%;
+	text-shadow: 0px 4px 13px rgba(0,0,0,0.7),
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);	
+}
+.main {
+	background: url(https://images.unsplash.com/photo-1460650671472-ba449b1a6f10?dpr=1&auto=compress,format&fit=crop&w=1199&h=900&q=80&cs=tinysrgb&crop=&bg=);
+	background-size: contain;
+	background-position: center;
+	height: 1000px;
+}
+
+.login {
+	background: url(https://images.unsplash.com/photo-1460650671472-ba449b1a6f10?dpr=1&auto=compress,format&fit=crop&w=1199&h=900&q=80&cs=tinysrgb&crop=&bg=);
+	background-size: contain;
+	background-position: center;
+	height: 1000px;
+}
+
+.register {
+	background: url(https://images.unsplash.com/photo-1460650671472-ba449b1a6f10?dpr=1&auto=compress,format&fit=crop&w=1199&h=900&q=80&cs=tinysrgb&crop=&bg=);
+	background-size: contain;
+	background-position: center;
+	height: 1000px;
+}
+
+.home {
+	background: url(https://images.unsplash.com/photo-1424746219973-8fe3bd07d8e3?dpr=1&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=&bg=);
+	background-size: cover;
+	background-position: center;
+	height: 1000px;	
+}
+
+.welcomeText {
+	font-weight: 400;
+	font-size: 6em;
+	color: white;
+}
+
+.welcomeText2 {
+	font-weight: 400;
+	font-size: 3em;
+	color: white;
+}
+
+hr {
+	width: 450px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+nav a {
+	font-size: 20px;
+}
+nav.navbar.navbar-inverse {
+	margin-bottom: 50px;
+	width: 100%;
+	position: fixed;	
+}
+.mainHome {
+	background-color: grey;
+	padding: 5px;
+	padding-top: 47px;
+	margin: 0 auto;
+	width: 65%;
+	font-family: 'Playfair Display SC'; 
+	color: white;
+}
+
+/*.container{
+    width: 100%;
+    position: relative;
+}*/
+.registerForm{
+	text-align: center;
+	width: 280px;
+    margin: 0px auto 30px;
+    padding: 15px;
+    top: 350px;
+    position: relative;
+    box-shadow: 
+    0 0 1px rgba(0, 0, 0, 0.3), 
+    0 3px 7px rgba(0, 0, 0, 0.3), 
+    inset 0 1px rgba(255,255,255,1),
+    inset 0 -3px 2px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    background: linear-gradient(#eeefef, #ffffff 10%);
+}
+.registerForm h1{
+    font-size: 22px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.registerForm button{
+    width: 100%;
+    height: 100%;
+    margin-top: -1px;
+    font-size: 1.4em;
+    line-height: 1.75;
+    color: white;
+    border: none;
+    border-radius: inherit;
+    background: #52cfeb;
+    background: -moz-linear-gradient(#52cfeb, #42A2BC);
+    background: -ms-linear-gradient(#52cfeb, #42A2BC);
+    background: -o-linear-gradient(#52cfeb, #42A2BC);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#52cfeb), to(#42A2BC));
+    background: -webkit-linear-gradient(#52cfeb, #42A2BC);
+    background: linear-gradient(black, black);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.35), inset 0 3px 2px rgba(255,255,255,0.2), inset 0 -3px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.loginForm h1{
+    font-size: 22px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.loginForm{
+	text-align: center;
+	width: 350px;
+    margin: 0px auto;
+    padding: 10px;
+    top: 400px;
+    position: relative;
+    box-shadow: 
+    0 0 1px rgba(0, 0, 0, 0.3), 
+    0 3px 7px rgba(0, 0, 0, 0.3), 
+    inset 0 1px rgba(255,255,255,1),
+    inset 0 -3px 2px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    background: linear-gradient(#eeefef, #ffffff 10%);
+}
+
+.loginForm .submit{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 66px;
+    right: -25px;
+    padding: 10px;
+    z-index: 2;
+
+    /* Styles */
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 2px rgba(0,0,0,0.1),
+        0 3px 2px rgba(0,0,0,0.1),
+        inset 0 -3px 2px rgba(0,0,0,0.2);
+}
+.loginForm button{
+    width: 100%;
+    height: 100%;
+    margin-top: -1px;
+    font-size: 1.4em;
+    line-height: 1.75;
+    color: white;
+    border: none;
+    border-radius: inherit;
+    background: #52cfeb;
+    background: -moz-linear-gradient(#52cfeb, #42A2BC);
+    background: -ms-linear-gradient(#52cfeb, #42A2BC);
+    background: -o-linear-gradient(#52cfeb, #42A2BC);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#52cfeb), to(#42A2BC));
+    background: -webkit-linear-gradient(#52cfeb, #42A2BC);
+    background: linear-gradient(black, black);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.35), inset 0 3px 2px rgba(255,255,255,0.2), inset 0 -3px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.loginInput{
+	width: 240px;
+}
+
+
