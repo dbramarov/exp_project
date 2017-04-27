@@ -12,7 +12,10 @@ app.config(function ($routeProvider) {
 	    })	
 	    .when("/home", {
 	        templateUrl:"partials/home.html"
-	    })		    		
+	    })		
+	    .when("/create", {
+	        templateUrl:"partials/create.html"
+	    })	    		
 		.otherwise({
 			redirectTo: '/'
 		})	
