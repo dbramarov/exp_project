@@ -27,8 +27,23 @@
 	</nav>
 
 	<div class="mainHome">
-	<h3>Recent Adventures:</h3>
-
+	<h2 style="text-align: center;"><strong id="recentAd">Recent Adventures:</strong></h2>
+		<div ng-repeat='event in events | orderBy: "-date":true'>
+			<div class="events">
+			<div ng-repeat='error in errors'>
+				<h3>{{error}}</h3>
+			</div>
+				<h2>Title: {{event.title}}</h2>
+				<p>Created by: {{event.user}}</p>
+				<button ng-click='join(event._id)'>Join Event</button>
+				<button ng-if='event.user == user' ng-click='delete(event._id)'>Remove Event</button>
+				<img class="img" src="{{event.image}}">
+				<p>Event Plans: {{event.text}}</p>
+				<p>{{event.date | date }} @ {{event.time}}</p>
+				<p>Who's Going?: <li ng-repeat ="users in event.other">{{users.username}}</li></p>
+				<hr class="hr">
+			</div>
+		</div>
 
 
 	</div>

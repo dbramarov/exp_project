@@ -3,9 +3,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var EventSchema = new mongoose.Schema({
-	_user:{
-		type: Schema.Types.ObjectId, ref: "User"
-	}
+	user:{
+		type:String,		
+	},
 	title:{
 		type:String,
 		required:'Needs to have a title.'
@@ -26,10 +26,10 @@ var EventSchema = new mongoose.Schema({
 		type: String,
 		required:'What time does this event start?',
 	},
-	other:{
-		type:String,
-	}
+
+	other:[{type: Schema.Types.ObjectId, ref: "User"}]
+
 },{timestamps:true});
 
 mongoose.model('Event',EventSchema);
-var Event = mongoose.model('Evetn');
+var Event = mongoose.model('Event');

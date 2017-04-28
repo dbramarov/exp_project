@@ -27,6 +27,7 @@ var UserSchema = new mongoose.Schema({
 	          message: "Password failed, must be at least 8 characters long."
 	        }
         },
+        event: [{type: mongoose.Schema.Types.ObjectId, ref: 'Event'}]
 },{timestamps:true});
 
 var User = mongoose.model('User', UserSchema);
