@@ -27,21 +27,31 @@
 	</nav>
 
 	<div class="mainHome">
-	<h2 style="text-align: center;"><strong id="recentAd">Recent Adventures:</strong></h2>
+	<h1 style="text-align: center; background-color: #232526; width: 95%; margin-left: 30px;"><strong id="recentAd">EXPLORE:</strong></h1>
 		<div ng-repeat='event in events | orderBy: "-date":true'>
 			<div class="events">
+
 			<div ng-repeat='error in errors'>
 				<h3>{{error}}</h3>
 			</div>
-				<h2>Title: {{event.title}}</h2>
-				<p>Created by: {{event.user}}</p>
+				<h2 style="text-align: center; margin-top: 0;">EXP: {{event.title}}</h2>
+				<p style="text-align: center; margin-bottom: 20px;">Created by: {{event.user}}</p>
+
+				<img class="img" src="{{event.image}}">
+				<iframe style="float: right; vertical-align: top;" 
+				  width="47%"
+				  height="300"
+				  frameborder="0" style="border:0"
+				  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCKTWbPjOUEEwcQThyVaw3TL_ETeMZIcik
+				    &q=Arlington VA" allowfullscreen>
+				</iframe>
+				
 				<button ng-click='join(event._id)'>Join Event</button>
 				<button ng-if='event.user == user' ng-click='delete(event._id)'>Remove Event</button>
-				<img class="img" src="{{event.image}}">
 				<p>Event Plans: {{event.text}}</p>
 				<p>{{event.date | date }} @ {{event.time}}</p>
 				<p>Who's Going?: <li ng-repeat ="users in event.other">{{users.username}}</li></p>
-				<hr class="hr">
+				<hr class="style-seven">
 			</div>
 		</div>
 
