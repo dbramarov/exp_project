@@ -1,0 +1,41 @@
+<div class="home" ng-controller="homeController">
+	<nav class="navbar navbar-inverse">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand">{exp}</a>
+	    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+	      <ul class="nav navbar-nav">
+	       	<li><a href="#!/home">Home</a></li>
+	       	<li class="active"><a href="#!/about">About</a></li>
+		      <li><a href="#!/create">Create EXP</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right"> 
+	      	<li class="active"><a>Welcome {{user}}</a></li>
+	        <li><a ng-click='logout()' href="#">Log Out</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="mainHome">
+		<div class="abouttxt">
+			<h1 style="margin-top: 20px; margin-bottom: 30px;">About {exp}</h1>
+			<h2 style="font-family: Cookie;">Experience | Explore</h2>
+			<p style="margin-bottom: 20px;" class="header1">No Weekend plans? Looking for something to do? Look no further! Check out our Home page for the latest and most popular events people are attending in your area!</p>
+			<button ng-click="home()" class="abtbtn">Check out some events</button>
+			<p style="margin-bottom: 20px;" class="header1">Have an awesome event or experience you want to recomend? Click below to create one for others to join!</p>
+			<button ng-click="crt()" class="abtbtn">Create an event</button>
+			<img class="aboutIMG" src="https://images.unsplash.com/photo-1468234847176-28606331216a?dpr=1&auto=compress,format&fit=crop&w=1199&h=591&q=80&cs=tinysrgb&crop=&bg=">
+		</div>
+	</div>
+</div>

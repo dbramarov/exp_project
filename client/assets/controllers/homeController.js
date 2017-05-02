@@ -1,8 +1,11 @@
-app.controller('homeController',["$scope","userFactory",'mainFactory',"$location","$cookies",function ($scope,userFactory,mainFactory,$location,$cookies) {
+app.controller('homeController',["$sce","$scope","userFactory",'mainFactory',"$location","$cookies",function ($sce,$scope,userFactory,mainFactory,$location,$cookies) {
     $scope.user = $cookies.get('user_name');
     $scope.events = [];
     $scope.errors = [];
  
+    if(!$scope.user){
+        $location.url('/')
+    }
 
     var main = function(){
         mainFactory.getEvents(function(data){
@@ -39,10 +42,12 @@ app.controller('homeController',["$scope","userFactory",'mainFactory',"$location
         $location.url("/");
     }
 
+    $scope.urlBuilder = function(location){
+        return $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?key=AIzaSyCKTWbPjOUEEwcQThyVaw3TL_ETeMZIcik&q=" + location);
+    }
+
     $scope.join = function(id){
         mainFactory.join(id, $scope.user, function(data){
-            console.log(data)
-            console.log(data.error)
             if(data.error){
                 if(typeof(data.error)=='object'){
                     angular.forEach(data.error, function(v,k){
@@ -55,8 +60,16 @@ app.controller('homeController',["$scope","userFactory",'mainFactory',"$location
                     $location.url('/home');
                 }
             }
-            main();
+            
         })
+        main();
     }
 
+    $scope.home = function(){
+        $location.url('/home');
+    }
+
+    $scope.crt = function(){
+        $location.url('/create');
+    }
 }]);

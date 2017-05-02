@@ -1,4 +1,4 @@
-<div class="home" ng-controller="homeController">
+<div class="cc" ng-controller="homeController">
 	<nav class="navbar navbar-inverse">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,17 +9,18 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand">{exp.}</a>
+	      <a class="navbar-brand">{exp}</a>
 	    </div>
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 	      <ul class="nav navbar-nav">
 	       	<li><a href="#!/home">Home</a></li>
-	       	<li><a href="">About</a></li>
-		      <li class="active"><a href="#!/create">Create</a></li>
+	       	<li><a href="#!/about">About</a></li>
+		      <li class="active"><a href="#!/create">Create EXP</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right"> 
+	      	<li class="active"><a>Welcome {{user}}</a></li>
 	        <li><a ng-click='logout()' href="#">Log Out</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -27,14 +28,16 @@
 	</nav>
 
 	<div class="createHome">
-		<div class="form">
+		<div class="createForm">
 			<h2>Create an adventure!</h2>
 			<form>
-				<p>Adventure: <input type="text" ng-model='newEvent.title'></p>
-				<p>Image (optional | url): <input type="text" ng-model='newEvent.image'></p>
-				<p>Description: <textarea ng-model='newEvent.text'></textarea></p>
-				<p>Date: <input type="date" ng-model='newEvent.date'></p>
-				<p>Time: <select ng-model='newEvent.time'>
+				<p><input placeholder="Adventure" type="text" ng-model='newEvent.title'></p>
+				<p><input placeholder="Image (optional | url)" type="text" ng-model='newEvent.image'></p>
+				<p><textarea placeholder="Description" ng-model='newEvent.text'></textarea></p>
+				<p><input placeholder="Date" type="date" ng-model='newEvent.date'></p>
+				<p><input type="text" placeholder="Location of event" ng-model='newEvent.location'></p>
+				<p><select ng-model='newEvent.time'>
+					<option value="" disabled selected>Please select a time.</option>
 					<option>12:00 PM</option>
 					<option>1:00 PM</option>
 					<option>2:00 PM</option>
@@ -60,14 +63,14 @@
 					<option>10:00 AM</option>
 					<option>11:00 AM</option>
 				</select></p>
-				<input type="submit" value="Submit Event!" ng-click='create()'>
+				<button ng-click='create()' >Submit Event</button>
 			</form>
+			</div>
 			<div class="photo">
 				<img class="createIMG" src="https://images.unsplash.com/photo-1456949037425-4b097bbcc0e8?dpr=1&auto=compress,format&fit=crop&w=1199&h=674&q=80&cs=tinysrgb&crop=&bg=">
 				<img class="createIMG" src="https://images.unsplash.com/photo-1473088555253-cc83bbc5dae3?dpr=1&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=&bg=">
 				<img class="createIMG" src="https://images.unsplash.com/photo-1485321586038-4cc99992a06f?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=">
-				<img class="createIMG" src="https://images.unsplash.com/photo-1490902931801-d6f80ca94fe4?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=">
+				<img class="createIMG" src="https://images.unsplash.com/photo-1491505897904-9b84e5727918?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=">
 			</div>
-		</div>
 	</div>
 </div>

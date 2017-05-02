@@ -19,7 +19,7 @@ module.exports = {
 	},
 	create: function(req,res){
 		console.log(req.body);
-		Event.create({user:req.body.user,title:req.body.title, image:req.body.image, text:req.body.text, date: req.body.date, time:req.body.time},function(err,event){
+		Event.create({user:req.body.user,title:req.body.title, image:req.body.image, text:req.body.text, date: req.body.date, time:req.body.time, location: req.body.location},function(err,event){
 			if (err){
 				res.json(err);
 			}

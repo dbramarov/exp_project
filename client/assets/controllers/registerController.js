@@ -37,7 +37,7 @@ app.controller('registerController',["$scope","userFactory","$location","$cookie
     		else{
     			$cookies.put('user_name',data.username);
     			$scope.user = data;
-    			$location.url('/home');
+    			$location.url('/about');
     		}
     	})
     }

@@ -26,6 +26,10 @@ var EventSchema = new mongoose.Schema({
 		type: String,
 		required:'What time does this event start?',
 	},
+	location:{
+		type: String,
+		required:'Please enter location',
+	},
 
 	other:[{type: Schema.Types.ObjectId, ref: "User"}]
 
