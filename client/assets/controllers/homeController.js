@@ -2,6 +2,7 @@ app.controller('homeController',["$sce","$scope","userFactory",'mainFactory',"$l
     $scope.user = $cookies.get('user_name');
     $scope.events = [];
     $scope.errors = [];
+    $scope.date = new Date();
  
     if(!$scope.user){
         $location.url('/')
@@ -10,23 +11,32 @@ app.controller('homeController',["$sce","$scope","userFactory",'mainFactory',"$l
     var main = function(){
         mainFactory.getEvents(function(data){
             $scope.events = data.event;
+            console.log($scope.events)
         })
     }
     main();
 
     $scope.create = function(){
         $scope.newEvent.user = $scope.user;
-        mainFactory.create($scope.newEvent, function(data){
-            if(data.errors){
-                console.log(data.errors);
-                $scope.errors = data.errors;
-            }
-            else{
-                $scope.errors = [];
-            }
-            $scope.newList = {};
-            $location.url("/home");
-        })
+        if($scope.newEvent.date <= $scope.date){
+            $scope.errors.push("Please enter a future date. Thank you.")
+            $location.url("/create");
+
+        }
+        else{  
+            mainFactory.create($scope.newEvent, function(data){
+                if(data.errors){
+                    console.log(data.errors);
+                    $scope.errors = data.errors;
+                    $location.url("/create");
+                }
+                else{
+                    $scope.errors = [];
+                    $location.url("/home");
+                }
+                
+            })
+        }
     }
 
     $scope.delete = function(id){
@@ -60,8 +70,12 @@ app.controller('homeController',["$sce","$scope","userFactory",'mainFactory',"$l
                     $location.url('/home');
                 }
             }
-            
+            else{
+            $scope.errors = []
+            main();
+            }
         })
+        $scope.errors = []
         main();
     }
 
