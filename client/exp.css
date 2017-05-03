@@ -77,7 +77,6 @@ nav.navbar.navbar-inverse {
 	font-family: 'Playfair Display SC'; 
 	color: white;
     font-size: 1.25em;
-
 }
 
 .createHome {
@@ -87,7 +86,6 @@ nav.navbar.navbar-inverse {
 	margin: 0 auto;
 	width: 65%;
 	font-family: 'Playfair Display SC'; 
-	/*color: white;*/
 }
 
 .form{
@@ -274,6 +272,9 @@ nav.navbar.navbar-inverse {
 }
 
 .events {
+    background: #232526;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	width: 95%;
 	margin: auto;
 	padding: 20px;
