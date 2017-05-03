@@ -30,7 +30,7 @@
 	<div class="mainHome">
 	<h1 style="text-align: center; width: 95%; margin-left: 30px; font-family: Cookie; padding-top: 15px;">"The only source of knowledge is experience." - Albert Einstein</h1>
 	<hr class="style-seven">
-		<div ng-repeat='event in events | orderBy: "-date":true track by $index'>
+		<div ng-repeat='event in events | orderBy: "-date":true track by $index' >
 			<div class="events">
 
 				<div ng-repeat='error in errors'>
@@ -50,11 +50,10 @@
 				  ng-src="{{urlBuilder(event.location)}}" allowfullscreen>
 				</iframe>
 
-<!-- 				<p>{{event.location}}</p> -->
 				<div class="header1">
 					<button ng-click='join(event._id)'>Join Event</button>
 					<button ng-if='event.user == user' ng-click='delete(event._id)'>Remove Event</button>
-					<p style="width: 650px;">Event Plans: {{event.text}}</p>
+					<p style="width: 60%;">Event Plans: {{event.text}}</p>
 					<p>{{event.date | date }} @ {{event.time}}</p>
 					<p>Who's Going?: <li ng-repeat ="users in event.other">{{users.username}}</li></p>
 				</div>

@@ -30,11 +30,12 @@
 	<div class="createHome">
 		<div class="createForm">
 			<h2>Create an adventure!</h2>
+			<p ng-repeat="error in errors">{{error}}</p>
 			<form>
 				<p><input placeholder="Adventure" type="text" ng-model='newEvent.title'></p>
 				<p><input placeholder="Image (optional | url)" type="text" ng-model='newEvent.image'></p>
 				<p><textarea placeholder="Description" ng-model='newEvent.text'></textarea></p>
-				<p><input placeholder="Date" type="date" ng-model='newEvent.date'></p>
+				<p><input  type="date" ng-model='newEvent.date'></p>
 				<p><input type="text" placeholder="Location of event" ng-model='newEvent.location'></p>
 				<p><select ng-model='newEvent.time'>
 					<option value="" disabled selected>Please select a time.</option>

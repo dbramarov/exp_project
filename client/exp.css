@@ -13,27 +13,28 @@
 	background: url(https://images.unsplash.com/photo-1460650671472-ba449b1a6f10?dpr=1&auto=compress,format&fit=crop&w=1199&h=900&q=80&cs=tinysrgb&crop=&bg=);
 	background-size: contain;
 	background-position: center;
-	height: 1000px;
+	height: 1010px;
 }
 
 .login {
 	background: url(https://images.unsplash.com/photo-1460650671472-ba449b1a6f10?dpr=1&auto=compress,format&fit=crop&w=1199&h=900&q=80&cs=tinysrgb&crop=&bg=);
 	background-size: contain;
 	background-position: center;
-	height: 1000px;
+	height: 1010px;
 }
 
 .register {
 	background: url(https://images.unsplash.com/photo-1460650671472-ba449b1a6f10?dpr=1&auto=compress,format&fit=crop&w=1199&h=900&q=80&cs=tinysrgb&crop=&bg=);
 	background-size: contain;
 	background-position: center;
-	height: 1000px;
+	height: 1010px;
 }
 
 .home {
     background: url(https://images.unsplash.com/photo-1424746219973-8fe3bd07d8e3?dpr=1&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=&bg=);
 	background-size: 100%;
 	background-position: center;
+  height: 1010px;
 }
 
 .cc{
@@ -74,6 +75,9 @@ nav.navbar.navbar-inverse {
 	padding-top: 47px;
 	margin: 0 auto;
 	width: 65%;
+    height: 1010px;
+    overflow-y: auto;
+    overflow-x: hidden;
 	font-family: 'Playfair Display SC'; 
 	color: white;
     font-size: 1.25em;
@@ -278,6 +282,7 @@ nav.navbar.navbar-inverse {
 	width: 95%;
 	margin: auto;
 	padding: 20px;
+
 }
 
 .events button {
